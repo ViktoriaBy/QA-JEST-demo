@@ -1,5 +1,6 @@
 
 
+
 const { add, subtract, multiply, divide, sayHello } = require('../function');
 
 test('Hello World', () =>{
@@ -67,3 +68,33 @@ let bankAccount = {
         expect(bankAccount.balance).toEqual(300)
     })
   })
+
+  //EOD TESTING REVIEW
+  //create array of at least 5 items
+  //create test that checks that an item is not in the array
+
+  const arr = ['apple', 'orange', 'banana', 'cherry', 'mango']
+
+  test('is it in the array', () =>{
+      expect(arr).not.toContain('blueberries')
+         
+  })
+
+  //CREATE TWO VARIABLES
+  //one for your age one for your best friends/
+  //test should check that your age is always greater than your friends age
+
+
+let myAge = 31
+let friendsAge = 20
+
+test('my age is greater', () =>{
+    expect(myAge).toBeGreaterThan(friendsAge)
+})
+
+//test that the array will always have 5 elements
+test('always five elements',() => {
+    expect(arr.length).toEqual(7)
+    expect(arr).toHaveLength(5)
+})
+
